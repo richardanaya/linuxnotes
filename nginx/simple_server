@@ -1,6 +1,8 @@
+# this is a default http configuration that can be augmented with https using 
+# https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04
 server {
-        listen 80;
-        listen [::]:80;
+        listen 80 default_server;
+        listen [::]:80 default_server;
 
         root /var/www/<domain>;
         index index.html
